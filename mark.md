@@ -21,4 +21,19 @@ Linux下的设置：
     export GOBIN=~/gobin
   PATH：
     export PATH=$PATH:$GOROOT/bin:$GOBIN
+    
+工作目录结构：
+  golib：
+    src/ 源码文件
+    pkg/ 归档文件 平台相关目录：$GOOS_$GOARCH
+    bin/ GOBIN已设置则无效
+    
+源码文件：
+  命令源码、库源码
+  测试源码 _test.go后缀
+  
+代码包声明和导入
+
+命令基础
+go run
 ```
