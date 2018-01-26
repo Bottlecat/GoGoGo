@@ -11,4 +11,14 @@
   1. 语法糖少
   2. 速度不及C
   3. 第三方库少
+  
+Linux下的设置：
+  GOROOT：安装目录
+    export GOROOT=/usr/local/go
+  GOPATH：工作目录
+    export GOPATH=~/golib:~/goproject
+  GOBIN: 存放可执行文件的目录
+    export GOBIN=~/gobin
+  PATH：
+    export PATH=$PATH:$GOROOT/bin:$GOBIN
 ```
