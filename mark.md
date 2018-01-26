@@ -35,5 +35,8 @@ Linux下的设置：
 代码包声明和导入
 
 命令基础
-go run
+go run -a -n -p -v -work -x
+go build
+go install
+go get
 ```
