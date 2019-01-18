@@ -541,40 +541,29 @@ Go基础知识：
               return c
          }
      
+  24.反射
+     反射就是程序能够在运行时检查变量和值，求出它们的类型。
+     在 Go 语言中，reflect 实现了运行时反射。reflect 包会帮助识别 interface{} 变量的底层具体类型和具体值。
+     reflect.Type 表示 interface{} 的具体类型，而 reflect.Value 表示它的具体值。
+     reflect.TypeOf() 和 reflect.ValueOf() 两个函数可以分别返回 reflect.Type 和 reflect.Value。
+     reflect 包中还有一个重要的类型：Kind。在反射包中，Kind 和 Type 的类型可能看起来很相似。
+     Type 表示 interface{} 的实际类型（在这里是 main.Order)，而 Kind 表示该类型的特定类别（在这里是 struct）。
+     NumField() 方法返回结构体中字段的数量，而 Field(i int) 方法返回reflect.Value。
+     Int 和 String 可以帮助我们分别取出 reflect.Value 作为 int64 和 string。
+     清晰优于聪明。而反射并不是一目了然的。
+     反射是 Go 语言中非常强大和高级的概念，我们应该小心谨慎地使用它。使用反射编写清晰和可维护的代码是十分困难的。
+     你应该尽可能避免使用它，只在必须用到它时，才使用反射。
      
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-  
-  
-  
+  25.读取文件
+     将整个文件读取到内存是最基本的文件操作之一。这需要使用 ioutil 包中的 ReadFile 函数。
+          使用绝对文件路径
+          使用命令行标记来传递文件路径（使用 flag 包）
+          将文件绑定在二进制文件中（packr包）
+     分块读取文件
+          当文件非常大时，尤其在 RAM 存储量不足的情况下，把整个文件都读入内存是没有意义的。更好的方法是分块读取文件。这可以使用 bufio 包来完成。
+     逐行读取文件使用 bufio 来实现。
+          逐行读取文件涉及到以下步骤。
+              打开文件；
+              在文件上新建一个 scanner；
+              扫描文件并且逐行读取。
+              
