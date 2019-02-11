@@ -9,10 +9,6 @@ Linux下的设置：
     export GOROOT=/usr/local/go
   GOPATH：工作目录
     export GOPATH=~/golib:~/goproject
-  GOBIN: 存放可执行文件的目录
-    export GOBIN=~/gobin
-  PATH：
-    export PATH=$PATH:$GOROOT/bin:$GOBIN
     
 工作目录结构：
   golib：
